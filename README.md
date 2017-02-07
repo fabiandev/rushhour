@@ -24,7 +24,7 @@ The A* algorithm uses an open and closed list to ensure, that nodes are not visi
 
 It is worth to mention, that A* doesn't simply use the value returned by the heuristic, but also adds the previous path costs (in this case the depth) to it. The value that is actually used to sort the open list is `node_depth + node_heuristic_value`.  
 
-Take a look at our implementation in [`AStar/AStar.java`](https://github.com/saschazar21/rushhour/blob/master/AStar/AStar.java)
+Take a look at our implementation in [`AStar/AStar.java`](AStar/AStar.java)
 
 ## Heuristics
 
@@ -44,7 +44,7 @@ For getting the desired value, we go through each car on the board, ignore all c
 
 Every remaining car intersecting with the goal car counts one. This value plus one for the goal car (to move the goal car to the exit, one move is required) is the result for a state.  
 
-The implementation can be found in  [`Heuristics/BlockingHeuristic.java`](https://github.com/saschazar21/rushhour/blob/master/Heuristics/BlockingHeuristic.java).
+The implementation can be found in  [`Heuristics/BlockingHeuristic.java`](Heuristics/BlockingHeuristic.java).
 
 ### Advanced Heuristic
 
@@ -122,7 +122,7 @@ getBlockingValue(car, requiredSpace) {
   return value;
 }
 ```
-You can see the full implementation in [`Heuristics/AdvancedHeuristic.java`](https://github.com/saschazar21/rushhour/blob/master/Heuristics/AdvancedHeuristic.java).
+You can see the full implementation in [`Heuristics/AdvancedHeuristic.java`](Heuristics/AdvancedHeuristic.java).
 
 #### Drawbacks
 
@@ -134,7 +134,7 @@ You can see the full implementation in [`Heuristics/AdvancedHeuristic.java`](htt
 
 We could accomplish to implement an admissible and optimal heuristic, that visits fewer nodes than the blocking heuristic in most cases, but never visits more nodes.
 
-> The results can also be found in a separate file [`RESULTS.txt`](https://github.com/saschazar21/rushhour/blob/master/RESULTS.txt) as plain text.
+> The results can also be found in a separate file [`RESULTS.txt`](RESULTS.txt) as plain text.
 
 | | Zero | | | Blocking | | | Advanced | | |
 |-----------|---------|------|--------|---------|------|--------|---------|------|-------
